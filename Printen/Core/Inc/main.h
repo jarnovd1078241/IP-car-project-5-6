@@ -29,8 +29,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32h5xx_hal.h"
 
-extern UART_HandleTypeDef huart3;
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -55,14 +53,26 @@ extern UART_HandleTypeDef huart3;
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void usDelay(uint32_t uSec);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-
 /* USER CODE BEGIN Private defines */
 
+/* Define GPIO pins for Ultrasonic Sensor */
+#define TRIG_Pin        GPIO_PIN_2    // TRIG should be output
+#define TRIG_GPIO_Port  GPIOA
+#define ECHO_Pin        GPIO_PIN_1    // ECHO should be input
+#define ECHO_GPIO_Port  GPIOA       // Replace with actual port
+
 /* USER CODE END Private defines */
+
+/* Private externs -----------------------------------------------------------*/
+extern I2C_HandleTypeDef hi2c1;
+extern TIM_HandleTypeDef htim3;
+extern UART_HandleTypeDef huart3;
+ // Timer for usDelay function
+/* End of private externs */
 
 #ifdef __cplusplus
 }

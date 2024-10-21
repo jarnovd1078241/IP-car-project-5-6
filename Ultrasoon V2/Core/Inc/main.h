@@ -36,9 +36,7 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-extern I2C_HandleTypeDef hi2c1;
-extern TIM_HandleTypeDef htim3;
-extern UART_HandleTypeDef huart3;
+
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -53,21 +51,24 @@ extern UART_HandleTypeDef huart3;
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-
-/* USER CODE BEGIN EFP */
 void usDelay(uint32_t uSec);
+/* USER CODE BEGIN EFP */
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ECHO_Pin GPIO_PIN_0
+#define ECHO_GPIO_Port GPIOA
+#define TRIG_Pin GPIO_PIN_2
+#define TRIG_GPIO_Port GPIOA
+#define TRIG2_Pin GPIO_PIN_7
+#define TRIG2_GPIO_Port GPIOC
+#define ECHO2_Pin GPIO_PIN_8
+#define ECHO2_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
-
-/* Define GPIO pins for Ultrasonic Sensor */
-#define TRIG_Pin        GPIO_PIN_2    // TRIG should be output
-#define TRIG_GPIO_Port  GPIOA
-#define ECHO_Pin        GPIO_PIN_0    // ECHO should be input
-#define ECHO_GPIO_Port  GPIOA       // Replace with actual port
-
+extern UART_HandleTypeDef huart3;
+extern TIM_HandleTypeDef htim3;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

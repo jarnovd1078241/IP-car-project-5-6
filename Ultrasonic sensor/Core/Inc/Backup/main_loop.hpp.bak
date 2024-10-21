@@ -1,0 +1,37 @@
+/*
+ * This header serves as C interface for calling the
+ * main loop in C++. All initialisations from CubeMX
+ * are still done in main.c.
+ */
+
+
+#ifndef INC_MAIN_LOOP_HPP_
+#define INC_MAIN_LOOP_HPP_
+
+
+#include "main.h"
+#include "debug_printer.hpp"
+
+
+/* Actual C++ main loop. */
+void main_loop();
+
+
+extern Debug_printer cout;
+
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
+/*
+* Function for main to call to prevent overwriting
+* when generating code from CubeMX.
+*/
+void main_loop_c ();
+
+#ifdef __cplusplus
+	}
+#endif
+
+
+#endif /* INC_MAIN_LOOP_HPP_ */

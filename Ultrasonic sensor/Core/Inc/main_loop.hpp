@@ -5,6 +5,7 @@
 extern "C" {
 #endif
 
+/* Function for main to call to prevent overwriting when generating code from CubeMX. */
 void main_loop_c();
 
 #ifdef __cplusplus

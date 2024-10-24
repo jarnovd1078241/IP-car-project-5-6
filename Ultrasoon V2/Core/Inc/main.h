@@ -46,12 +46,12 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+void usDelay(uint32_t uSec);
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-void usDelay(uint32_t uSec);
+
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
@@ -65,6 +65,10 @@ void usDelay(uint32_t uSec);
 #define TRIG2_GPIO_Port GPIOC
 #define ECHO2_Pin GPIO_PIN_8
 #define ECHO2_GPIO_Port GPIOA
+#define ECHO3_Pin GPIO_PIN_10
+#define ECHO3_GPIO_Port GPIOA
+#define TRIG3_Pin GPIO_PIN_5
+#define TRIG3_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 extern UART_HandleTypeDef huart3;

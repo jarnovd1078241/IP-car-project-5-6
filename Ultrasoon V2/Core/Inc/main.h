@@ -73,6 +73,7 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 extern UART_HandleTypeDef huart3;
 extern TIM_HandleTypeDef htim3;
+extern UART_HandleTypeDef huart1;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

@@ -1,0 +1,35 @@
+
+#include "debug_printer.hpp"
+#include "main_loop.hpp"
+
+Debug_Printer cout(&huart3);
+
+/*
+ * Prevents code runaway when for example a variable gets
+ * corrupted or a bug surfaces.
+ */
+
+
+
+
+/*
+ * Handles reading and validating force and tilt.
+ * Put into a seperate function to avoid nesting.
+ *
+ * @param 	module: the module to validate the data from.
+ * @return 	an error code indicating succesfulness.
+ */
+
+
+void main_loop()
+{
+	cout << "default" << endline;
+}
+
+
+
+
+extern "C" void main_loop_c()
+{
+	main_loop();
+}
